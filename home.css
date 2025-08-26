@@ -181,17 +181,25 @@ body::before {
 
 .video-container {
   margin-top: 30px;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* กำหนดความกว้างสูงสุด */
+  padding-bottom: 56.25%; /* สัดส่วน 16:9 */
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.video-container video {
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 800px; /* ขนาดสูงสุด */
-  height: auto;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
+
 
 
 /* responsive สำหรับมือถือ */
